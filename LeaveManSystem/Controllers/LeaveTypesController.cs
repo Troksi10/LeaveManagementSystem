@@ -21,7 +21,8 @@ namespace LeaveManSystem.Controllers
         // GET: LeaveTypes
         public async Task<IActionResult> Index()
         {
-            return View(await _context.LeaveTypes.ToListAsync());
+            var data = await _context.LeaveTypes.ToListAsync();
+            return View(data);
         }
 
         // GET: LeaveTypes/Details/5
